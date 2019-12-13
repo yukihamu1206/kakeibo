@@ -1,0 +1,21 @@
+<div class="col-xs-4"><%= render 'layouts/navleft' %></div>
+<div class="col-xs-4">
+	<div class="field">
+		<%= link_to "新しく追加する", new_category_path, class:"btn btn-success col-xs-12",style:"margin:30px auto" %>
+	</div>
+	<div class="col-xs-12">
+		<table class="table table-hover table-inverse col-xs-12">
+			<% @categories.each do |category| %>
+			<tr>
+				<td><h5><%=link_to category.name, category_path(category) %></h5></td>
+				<td><h5><%= category.budget %>円</h5></td>
+				<td class="category_td"><%= link_to "編集", edit_category_path(category.id), class:"btn btn-primary" %></td>
+				<td class="category_td"><%= link_to "削除", category_path(category.id), method: :delete,
+				data: {confirm: '削除しますか?'},class:"btn btn-warning" %></td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+</div>
+<div class="col-xs-4"><%= render 'layouts/navright' %></div>
+

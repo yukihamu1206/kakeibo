@@ -1,0 +1,31 @@
+# カテゴリー
+
+ja:
+  activerecord:
+    models:
+      category: カテゴリー
+    attributes:
+      category:
+        name: カテゴリー名
+
+# プロダクト
+
+ja:
+  activerecord:
+    models:
+      product: 支出
+    attributes:
+      product:
+        category: カテゴリー
+
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認パスワード
+# 金額

@@ -1,0 +1,11 @@
+<div class="col-xs-12">
+	<div class="icon ">
+		<%= link_to "",user_path(current_user), class:"far fa-user top_link", style:"text-decoration:none" %><br>
+		<p class="link_p">user</p>
+	</div>
+	<div class="icon ">
+		<%= link_to "",destroy_user_session_path,method: :delete, class:"fas fa-sign-out-alt top_link" , style:"text-decoration:none"%><br>
+		<p class="link_p">sign_out</p>
+	</div>
+
+</div>

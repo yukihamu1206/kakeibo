@@ -1,0 +1,19 @@
+<div class="col-xs-4"></div>
+  <div class="col-xs-4">
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field resisration_field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"メールアドレス",style:"width:100%" %>
+      </div>
+
+      <div class="field resisration_field">
+        <%= f.text_field :name, autocomplete: 'name',placeholder:"名前",style:"width:100%" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Log in",class:"btn btn-success regisration_action" %>
+      </div>
+    <% end %>
+
+  </div>
+<div class="cl-xs-4"></div>

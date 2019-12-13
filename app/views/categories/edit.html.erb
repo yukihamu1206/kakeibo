@@ -1,0 +1,22 @@
+<div class="col-xs-4"><%= render 'layouts/navleft' %></div>
+<div class="col-xs-4">
+<!-- エラーメッセージ -->
+	<% if @category.errors.any? %>
+	  <div id="error_explanation" style="margin: 30px auto" >
+	    <% @category.errors.full_messages.each do |msg| %>
+	      <%= msg %>
+	    <% end %>
+	  </div>
+	<% end %>
+
+	<div class="field">
+		<p>カテゴリー名を入力してね</p>
+		<%= form_for(@category) do |f| %>
+		<%= f.text_field :name, class: "col-xs-12" %><br>
+		<p style="margin-top:10px"> 予算を決めてね</p>
+		<%= f.text_field :budget,class: "col-xs-12" %>
+		<%= f.submit " 保存する", class: "btn btn-warning col-xs-12", style:"margin-top:20px" %>
+		<% end %>
+	</div>
+</div>
+<div class="col-xs-4"><%= render 'layouts/navright' %></div>

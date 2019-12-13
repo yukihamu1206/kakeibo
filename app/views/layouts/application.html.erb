@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kakeibo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.0/css/all.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <header>
+          <div class="nav navbar">
+            <ul class="nav_ul">
+              <li><i class="fas fa-sign-in-alt nav_li　text-muted"></i></li>
+              <li><%= link_to "", setting_path, class: "fas fa-cogs nav_li" %></i></li>
+            </ul>
+          </div>
+        </header>
+         <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<div class="col-xs-4"><%= render 'layouts/navleft' %></div>
+<div class="col-xs-4">
+	<table class="table col-xs-12">
+		<thead>
+		<tr>
+			<th><h2>総額</h2></th>
+			<th><h2><%= (@total_price).to_i %>/<%= (@total_budget).to_i %></h2></th>
+		</tr>
+		</thead>
+		<% @categories.each do |category| %>
+			<tr>
+				<td><%= category.name %></td>
+				<td><%= category.products.sum(:price) %>/<%= category.budget %></td>
+				<td><%= link_to "詳細を見る", category_path(category), class:"btn btn-success" %></td>
+			</tr>
+		<% end %>
+
+	</table>
+</div>
+<div class="col-xs-4"><%= render 'layouts/navright' %></div>
+

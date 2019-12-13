@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*ログインとサインアップ*/
+
+.resisration_field{
+	margin:50px auto;
+}
+
+.regisration_action{
+	width:100%;
+}
+
+.regisration_li{
+	text-decoration: none;
+	float:left;
+}
+
+/*product新規投稿*/
+
+.new_form{
+	margin-bottom:30px;
+}
+
+#error_explanation{
+	color:#FF99CC;
+}
+
+/*categoryのindex*/
+
+.category_td{
+	display:inline-block;
+}
+
+/*部分テンプレート*/
+
+.icon{
+	height:170px;
+	width:170px;
+	margin:20px auto;
+	text-align:center;
+}
+
+.top_link{
+	font-size:100px;
+	color:#555555;
+	text-decoration: none;
+}
+
+.link_p{
+	color:#555555;
+	font-size:15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

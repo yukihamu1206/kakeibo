@@ -1,0 +1,30 @@
+<div class="col-xs-4"><%= render 'layouts/navleft' %></div>
+<div class="col-xs-4">
+	<div class="col-xs-12">
+
+		<% if @user.errors.any? %>
+	  <div id="error_explanation" style="margin: 30px auto" >
+	    <ul>
+	    <% @user.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+	</ul>
+	  </div>
+	<% end %>
+
+		<%= form_for @user do |f| %>
+		<div class="field resisration_field">
+        <%= f.text_field :name, autofocus: true, autocomplete: "name",placeholder:"お名前",style:"width:100%" %>
+      </div>
+
+      <div class="field resisration_field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Eメール",style:"width:100%" %>
+      </div>
+
+      <div class="actions regisration_action">
+        <%= f.submit "変更する",class:"btn btn-warning regisration_action" %>
+      </div>
+    <% end %>
+   </div>
+ </div>
+ <div class="col-xs-4"><%= render 'layouts/navright' %></div>

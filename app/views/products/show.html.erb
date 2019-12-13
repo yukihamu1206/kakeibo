@@ -1,0 +1,33 @@
+<div class="col-xs-4"><%= render 'layouts/navleft' %></div>
+	<div class="col-xs-4">
+		<%= @product.day %>
+		<div class="col-xs-12">
+			<table class="table col-xs-12">
+				<tr>
+					<td><h5>カテゴリー:</h5></td>
+					<td><h5><%= @product.category.name %></h5></td>
+				</tr>
+				<tr>
+					<td><h5>買ったもの:</h5></td>
+					<td><h5><%= @product.name %></h5></td>
+				</tr>
+				<tr>
+					<td><h5>値段:</h5></td>
+					<td><h5><%= @product.price %>円</h5></td>
+				</tr>
+				<tr style="height:100px">
+					<td><%= @product.memo %></td>
+					<td></td>
+				</tr>
+			</table>
+
+		</div>
+		<div class="col-xs-12">
+		<%= link_to "編集する",edit_product_path, class:"btn btn-success col-xs-5" %>
+		<%= link_to "削除する",product_path, method: :delete, class:"btn btn-danger col-xs-5",style:"float:right" %>
+		</div>
+		<div class="col-xs-12" style="margin-top:30px">
+			<%= link_to "戻る", :back, class:"btn btn-warning col-xs-12" %>
+		</div>
+	</div>
+<div class="col-xs-4"><%= render 'layouts/navright' %></div>
