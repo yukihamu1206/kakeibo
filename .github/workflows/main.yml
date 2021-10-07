@@ -1,0 +1,14 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 < hi"
+      - run: echo "🐧 < hello"
+      - run: echo "🔎 < hello"
+      - run: echo "💡 < hello" 
+      - run: echo "🖥️ < hello"
+      - run: | 
+          IP_ADDRESS=`curl ifconfig.io`
+          echo $IP_ADDRESS
