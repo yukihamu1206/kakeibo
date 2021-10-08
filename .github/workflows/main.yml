@@ -13,6 +13,6 @@ jobs:
           IP_ADDRESS=`curl ifconfig.io`
           echo $IP_ADDRESS
       - run: | 
-          NEWS = curl --request GET \
-          --url https://cpi-wp.tamsan-dev.com/wp-json/myapi/v1/news \
+          NEWS = `curl --request GET \
+          --url https://cpi-wp.tamsan-dev.com/wp-json/myapi/v1/news`
           echo NEWS
