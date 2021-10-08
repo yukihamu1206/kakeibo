@@ -4,11 +4,22 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: self-hosted
     steps:
+      - name: Prepare the ssh key.
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          USER_NAME: ${{ secrets.USER_NAME }}
+          HOST_NAME: ${{ secrets.HOST_NAME }}
+        run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME}
+          echo SSH OK
+      - name: echo emoji.
       - run: echo "🎉 < hi"
       - run: echo "🐧 < hello"
       - run: echo "🔎 < hello"
       - run: echo "💡 < hello" 
       - run: echo "🖥️ < hello"
+      - name: get WP data.
       - run: | 
           IP_ADDRESS=`curl ifconfig.io`
           echo $IP_ADDRESS
