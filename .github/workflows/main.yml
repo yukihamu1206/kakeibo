@@ -2,11 +2,12 @@ name: CPI Deploy Test
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Run echo command.
-        run: echo "🎉 < hi"
-      - run: echo "🐧 < hello"
-      - run: echo "🔎 < hello"
-      - run: echo "💡 < hello" 
-      - run: echo "🖥️ < hello"
+        run: |
+         echo "🎉 < hi"
+         echo "🐧 < hello"
+         echo "🔎 < hello"
+         echo "💡 < hello" 
+         echo "🖥️ < hello"
