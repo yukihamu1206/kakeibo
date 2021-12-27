@@ -5,6 +5,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Run echo command.
+        run: echo "🎉 < hi"
       - run: echo "🐧 < hello"
       - run: echo "🔎 < hello"
       - run: echo "💡 < hello" 
